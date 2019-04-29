@@ -1,0 +1,36 @@
+<resources>
+    <string name="appNameFull">Munchkin Marvel Combat Calculator</string>
+    <string name="appNameShort">M2-C2</string>
+    <string name="begin">Begin</string>
+    <string name="classPrompt">Class:</string>
+    <string name="sexPrompt">Sex:</string>
+    <string name="rankPrompt">Rank:</string>
+    <string name="createAgentPrompt">Create an Agent</string>
+    <string name="equip_agent">Equip Agent</string>
+
+    <string-array name="agentClass_array">
+        <item>Espionage Agent</item>
+        <item>Operations Agent</item>
+        <item>Recon Agent</item>
+        <item>Recruiting Agent</item>
+        <item>Tactical Agent</item>
+        <item>Tech Agent</item>
+    </string-array>
+
+    <string-array name="agentSex_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="agentRank_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>
