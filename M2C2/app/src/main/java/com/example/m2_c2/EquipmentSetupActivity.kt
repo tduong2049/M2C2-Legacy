@@ -59,7 +59,7 @@ class EquipmentSetupActivity : AppCompatActivity() {
             headGear05, armor01, armor02, armor03, armor04, armor05, armor06, oneHanded01, oneHanded02,
             oneHanded03, oneHanded04, oneHanded05, oneHanded06, oneHanded07, oneHanded08, oneHanded09, twoHanded01,
             twoHanded02, twoHanded03, twoHanded04, footGear01, footGear02, footGear03)
-        
+
         equipmentRecycler = findViewById(R.id.equipment_recycler)
 
         equipmentRecycler.layoutManager = LinearLayoutManager(this)

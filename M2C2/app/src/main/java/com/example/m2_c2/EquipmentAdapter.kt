@@ -15,7 +15,7 @@ class EquipmentAdapter(private val equipmentList: MutableList<Equipment>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquipmentViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val itemView = layoutInflater.inflate(R.layout.equipment_view, parent, false) as TextView
+        val itemView = layoutInflater.inflate(R.layout.equipment_view, parent, false)
 
         return EquipmentViewHolder(itemView)
     }
