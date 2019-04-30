@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/equipmentName_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"/>
+
+    <TextView
+            android:id="@+id/equipmentBonus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bonus"
+            app:layout_constraintLeft_toRightOf="@id/equipmentName_text" tools:layout_editor_absoluteY="0dp"
+            android:layout_marginLeft="100dp"/>
+
+    <TextView
+            android:id="@+id/equipmentGoldValue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gold"
+            app:layout_constraintLeft_toRightOf="@id/equipmentBonus_text" tools:layout_editor_absoluteY="0dp"
+            android:layout_marginLeft="100dp"/>
+
+</android.support.constraint.ConstraintLayout>
