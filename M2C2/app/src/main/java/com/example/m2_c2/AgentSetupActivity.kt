@@ -12,6 +12,7 @@ class AgentSetupActivity : AppCompatActivity() {
     lateinit var agentClassSpinner: Spinner
     lateinit var agentSexSpinner: Spinner
     lateinit var agentRankSpinner: Spinner
+    lateinit var equipAgentButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class AgentSetupActivity : AppCompatActivity() {
         }
 
         // Button that will take users to the Equipment activity
-        val equipAgentButton: Button = findViewById(R.id.equipAgent_button)
+        equipAgentButton = findViewById(R.id.equipAgent_button)
 
         equipAgentButton.setOnClickListener {
             // Store the choices that the users made for the agent's class, sex, and rank.

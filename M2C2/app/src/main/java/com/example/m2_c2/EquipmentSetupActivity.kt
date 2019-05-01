@@ -16,8 +16,11 @@ class EquipmentSetupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_equipment_setup)
 
+        // Store the information of the serialized agent from the previous activity into
+        // an agent for this activity
         val agent: Agent = intent.extras.getSerializable("agent_id") as Agent
 
+        // Display the Agent's base information
         val agentClassText: TextView = findViewById(R.id.agentClass_text)
         val agentSexText: TextView = findViewById(R.id.agentSex_text)
         val agentRankText: TextView = findViewById(R.id.agentRank_text)
@@ -26,14 +29,19 @@ class EquipmentSetupActivity : AppCompatActivity() {
         agentSexText.text = "Sex: " + agent.sex
         agentRankText.text = "Rank: " + agent.rank.toString()
 
+        // Store a list of created Equipment cards to be displayed and potentially given to the Agent
         val equipmentList: MutableList<Equipment> = createEquipment()
 
+        // Display a scrollable list of Equipment cards
         equipmentRecycler = findViewById(R.id.equipment_recycler)
         equipmentRecycler.layoutManager = LinearLayoutManager(this)
         equipmentRecycler.adapter = EquipmentAdapter(equipmentList)
 
+        // Create a button that will move users to the next activity to add powers to the agent
         val addAlliesButton: Button = findViewById(R.id.addAllies_button)
 
+        // WHen the button is pressed, create the Agent's equipment list to prevent duplicates and store all selected
+        // Equipment cards from the list  Pass the serialized agent into the next activity for adding powers.
         addAlliesButton.setOnClickListener {
             agent.equipment.clear()
 

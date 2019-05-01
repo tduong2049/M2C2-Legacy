@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
-        tools:context=".EquipmentSetupActivity">
+        tools:context=".AllySetupActivity">
 
     <TextView
             android:layout_width="wrap_content"

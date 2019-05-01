@@ -5,18 +5,21 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import kotlinx.android.synthetic.main.equipment_view.view.*
 import org.jetbrains.anko.backgroundColor
-import org.w3c.dom.Text
 
+// Adapter for passing information from a list of Equipment objects to a Recyclerview that will display every
+// object from the list.
 class EquipmentAdapter(private val equipmentList: MutableList<Equipment>) :
     RecyclerView.Adapter<EquipmentAdapter.EquipmentViewHolder>() {
 
+    // The recycler must know how many objects are in the list to ensure that they can all be displayed
     override fun getItemCount() = equipmentList.size
 
+    // Create a custom view holder class that will hold Equipment views
     class EquipmentViewHolder(val equipmentView: View): RecyclerView.ViewHolder(equipmentView)
 
+    // When the Equipment View Holder is created, inflate the corresponding layout for displaying an Equipment
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquipmentViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemView = layoutInflater.inflate(R.layout.equipment_view, parent, false)
@@ -24,6 +27,9 @@ class EquipmentAdapter(private val equipmentList: MutableList<Equipment>) :
         return EquipmentViewHolder(itemView)
     }
 
+    // Within the Equipment View Holder, display the visible equipment's name, bonus, and gold value.
+    // When the item is selected by the user, darken the background for that row to indicate that it was been selected.
+    // Set the flag within the Equipment to indicate that it was selected or deselected
     override fun onBindViewHolder(equipmentViewHolder: EquipmentViewHolder, index: Int) {
         val equipment: Equipment = equipmentList[index]
 
@@ -47,6 +53,6 @@ class EquipmentAdapter(private val equipmentList: MutableList<Equipment>) :
             else {
                 equipmentViewHolder.equipmentView.backgroundColor = Color.WHITE
             }
-        }
-    }
-}
+        }// end Click Listener
+    }// end Bind View Holder function
+}// end Equipment Adapter class

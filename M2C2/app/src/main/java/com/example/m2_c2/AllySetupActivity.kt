@@ -4,9 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.widget.Button
 import android.widget.TextView
 
 class AllySetupActivity : AppCompatActivity() {
+    lateinit var allyRecycler: RecyclerView
+    lateinit var addPowersButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +26,29 @@ class AllySetupActivity : AppCompatActivity() {
         agentClassText.text = "Class: " + agent.name
         agentSexText.text = "Sex: " + agent.sex
         agentRankText.text = "Rank: " + agent.rank.toString()
+
+        val allyList: MutableList<Ally> = createAllies()
+
+        val allyRecycler: RecyclerView = findViewById(R.id.ally_recycler)
+        allyRecycler.layoutManager = LinearLayoutManager(this)
+        allyRecycler.adapter = AllyAdapter(allyList)
+
+        addPowersButton = findViewById(R.id.addPowers_button)
+
+        addPowersButton.setOnClickListener {
+            agent.allies.clear()
+
+            for (ally in allyList) {
+                if (ally.isSelected) agent.allies.add(ally)
+            }
+
+            val allySetupIntent = createPowerSetupIntent(this, agent)
+
+            startActivity(allySetupIntent)
+        }
     }
 
-    // Function that creates every base-game Equipment card and returns a list of it
+    // Function that creates every base-game Ally card and returns a list of it
     fun createAllies(): MutableList<Ally> {
         val ally01 = Ally("Falcon", 1)
         val ally02 = Ally("Iron Man", 2)
