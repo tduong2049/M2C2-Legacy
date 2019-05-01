@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Equip Your Agent"
+            android:text="Choose Your Allies"
             android:textColor="@color/colorPrimary"
             android:fontFamily="sans-serif-black"
             android:shadowDx="4"
@@ -45,15 +45,15 @@
             android:textSize="20sp"/>
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/equipment_recycler"
+            android:id="@+id/ally_recycler"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="240dp"/>
 
     <Button
-            android:id="@+id/addAllies_button"
+            android:id="@+id/addPowers_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/add_allies"/>
+            android:text="@string/add_powers"/>
 </LinearLayout>

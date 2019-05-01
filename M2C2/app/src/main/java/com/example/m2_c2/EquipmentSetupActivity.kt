@@ -1,9 +1,12 @@
 package com.example.m2_c2
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.widget.Button
 import android.widget.TextView
 
 class EquipmentSetupActivity : AppCompatActivity() {
@@ -23,6 +26,29 @@ class EquipmentSetupActivity : AppCompatActivity() {
         agentSexText.text = "Sex: " + agent.sex
         agentRankText.text = "Rank: " + agent.rank.toString()
 
+        val equipmentList: MutableList<Equipment> = createEquipment()
+
+        equipmentRecycler = findViewById(R.id.equipment_recycler)
+        equipmentRecycler.layoutManager = LinearLayoutManager(this)
+        equipmentRecycler.adapter = EquipmentAdapter(equipmentList)
+
+        val addAlliesButton: Button = findViewById(R.id.addAllies_button)
+
+        addAlliesButton.setOnClickListener {
+            agent.equipment.clear()
+
+            for (item in equipmentList) {
+                if (item.isSelected) agent.equipment.add(item)
+            }
+
+            val allySetupIntent = createAllySetupIntent(this, agent)
+
+            startActivity(allySetupIntent)
+        }
+    }
+
+    // Function that creates every base-game Equipment card and returns a list of it
+    fun createEquipment(): MutableList<Equipment> {
         val headGear01 = Equipment("Thor's Helmet", "Headgear", 3, 400)
         val headGear02 = Equipment("Ant-Man's Helmet", "Headgear", 1, 200)
         val headGear03 = Equipment("Nick Fury's Eyepatch", "Headgear", 1, 100)
@@ -60,9 +86,18 @@ class EquipmentSetupActivity : AppCompatActivity() {
             oneHanded03, oneHanded04, oneHanded05, oneHanded06, oneHanded07, oneHanded08, oneHanded09, twoHanded01,
             twoHanded02, twoHanded03, twoHanded04, footGear01, footGear02, footGear03)
 
-        equipmentRecycler = findViewById(R.id.equipment_recycler)
+        equipmentList.sortBy { it.name }
 
-        equipmentRecycler.layoutManager = LinearLayoutManager(this)
-        equipmentRecycler.adapter = EquipmentAdapter(equipmentList)
+        return equipmentList
+    }
+
+    // Function that takes in an Agent object and creates an intent to
+    // carry over its data into the Ally Setup activity
+    private fun createAllySetupIntent(context: Context, agent: Agent): Intent {
+        val intent = Intent(context, AllySetupActivity::class.java)
+
+        // Serialize the Agent object to carry over data into next activity
+        intent.putExtra("agent_id", agent)
+        return intent
     }
 }

@@ -2,7 +2,7 @@ package com.example.m2_c2
 
 import java.io.Serializable
 
-open class Card(val name: String = "Name") : Serializable {
+open class Card(val name: String = "Name", var isSelected: Boolean = false) : Serializable {
 }
 
 class Agent(name: String, val sex: String = "Male", var rank: Int = 1,

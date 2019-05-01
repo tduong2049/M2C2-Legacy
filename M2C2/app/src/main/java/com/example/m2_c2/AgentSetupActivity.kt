@@ -38,9 +38,10 @@ class AgentSetupActivity : AppCompatActivity() {
             agentRankSpinner.adapter = adapter
         }
 
-        val agentEquipButton: Button = findViewById(R.id.equipAgent_button)
+        // Button that will take users to the Equipment activity
+        val equipAgentButton: Button = findViewById(R.id.equipAgent_button)
 
-        agentEquipButton.setOnClickListener {
+        equipAgentButton.setOnClickListener {
             // Store the choices that the users made for the agent's class, sex, and rank.
             val agentClass: String = agentClassSpinner.selectedItem.toString()
             val agentSex: String = agentSexSpinner.selectedItem.toString()
