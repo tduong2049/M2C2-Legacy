@@ -14,19 +14,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/createAgentPrompt"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp"/>
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/colorPrimary"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:shadowColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:layout_marginBottom="40dp"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/classPrompt"
-            android:textSize="23sp"/>
+            android:textSize="20sp"/>
     <Spinner
             android:id="@+id/agentClass_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
     </Spinner>
 
     <TextView
@@ -34,26 +42,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/sexPrompt"
-            android:textSize="23sp"/>
+            android:textSize="20sp"/>
     <Spinner
             android:id="@+id/agentSex_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
     </Spinner>
-
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/rankPrompt"
-            android:textSize="23sp"/>
+            android:textSize="20sp"/>
     <Spinner
             android:id="@+id/agentRank_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
     </Spinner>
 
     <Button

@@ -2,7 +2,7 @@ package com.example.m2_c2
 
 import java.io.Serializable
 
-open class Card(val name: String = "Name") : Serializable {
+open class Card(val name: String = "Name", var isSelected: Boolean = false) : Serializable {
 }
 
 class Agent(name: String, val sex: String = "Male", var rank: Int = 1,
@@ -11,7 +11,7 @@ class Agent(name: String, val sex: String = "Male", var rank: Int = 1,
         val allies: MutableList<Ally> = mutableListOf()
 }
 
-class Equipment(name: String,type: String, var bonus: Int = 0, val goldValue: Int = 0)
+class Equipment(name: String, type: String, var bonus: Int = 0, val goldValue: Int = 0)
         : Card(name) {
 }
 
@@ -21,11 +21,6 @@ class Ally(name: String, var bonus: Int = 0) : Card(name) {
 class OneShot(name: String, var playerBonus: Int = 0, var monsterBonus: Int = 0,
               val goldValue: Int = 0) : Card(name) {
 }
-
-/*
-class LevelUp(name: String, description: String, var levelUpValue: Int) : com.example.m2_c2.Card(name, description) {
-}
-*/
 
 class Monster(name:String, val level: Int = 1, val badStuffText: String, var strength: Int,
               var levelGain: Int = 1) : Card(name) {

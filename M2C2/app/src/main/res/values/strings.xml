@@ -7,6 +7,8 @@
     <string name="rankPrompt">Rank:</string>
     <string name="createAgentPrompt">Create an Agent</string>
     <string name="equip_agent">Equip Agent</string>
+    <string name="add_allies">Add Allies</string>
+    <string name="add_powers">Add Powers</string>
 
     <string-array name="agentClass_array">
         <item>Espionage Agent</item>
