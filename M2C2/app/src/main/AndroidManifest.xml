@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".AffiliationSetupActivity">
+        </activity>
+        <activity android:name=".PowerSetupActivity">
+        </activity>
         <activity android:name=".AllySetupActivity">
         </activity>
         <activity android:name=".EquipmentSetupActivity">

@@ -9,6 +9,8 @@ class Agent(name: String, val sex: String = "Male", var rank: Int = 1,
                 var strength: Int = 0) : Card(name) {
         val equipment: MutableList<Equipment> = mutableListOf()
         val allies: MutableList<Ally> = mutableListOf()
+        val powers: MutableList<Power> = mutableListOf()
+        val affiliations: MutableList<Affiliation> = mutableListOf()
 }
 
 class Equipment(name: String, type: String, var bonus: Int = 0, val goldValue: Int = 0) : Card(name) {

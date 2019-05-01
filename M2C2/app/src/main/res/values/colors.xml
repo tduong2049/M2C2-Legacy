@@ -5,4 +5,5 @@
     <color name="colorAccent">#E1E1E1</color>
     <color name="colorBonus">#32D7FC</color>
     <color name="colorGold">#FFD44F</color>
+    <color name="colorRank">#6A49FF</color>
 </resources>

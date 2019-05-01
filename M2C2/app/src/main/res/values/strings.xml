@@ -9,6 +9,7 @@
     <string name="equip_agent">Equip Agent</string>
     <string name="add_allies">Add Allies</string>
     <string name="add_powers">Add Powers</string>
+    <string name="select_a_villian">Select a Villian</string>
 
     <string-array name="agentClass_array">
         <item>Espionage Agent</item>

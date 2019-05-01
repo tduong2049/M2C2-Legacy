@@ -29,7 +29,7 @@ class AllySetupActivity : AppCompatActivity() {
 
         val allyList: MutableList<Ally> = createAllies()
 
-        val allyRecycler: RecyclerView = findViewById(R.id.ally_recycler)
+        allyRecycler = findViewById(R.id.ally_recycler)
         allyRecycler.layoutManager = LinearLayoutManager(this)
         allyRecycler.adapter = AllyAdapter(allyList)
 
@@ -76,9 +76,9 @@ class AllySetupActivity : AppCompatActivity() {
     }
 
     // Function that takes in an Agent object and creates an intent to
-    // carry over its data into the Ally Setup activity
+    // carry over its data into the Power Setup activity
     private fun createPowerSetupIntent(context: Context, agent: Agent): Intent {
-        val intent = Intent(context, AllySetupActivity::class.java)
+        val intent = Intent(context, PowerSetupActivity::class.java)
 
         // Serialize the Agent object to carry over data into next activity
         intent.putExtra("agent_id", agent)
