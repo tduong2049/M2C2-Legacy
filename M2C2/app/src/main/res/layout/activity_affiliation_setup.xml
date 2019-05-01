@@ -42,18 +42,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
             android:textSize="20sp"/>
 
-    <android.support.v7.widget.RecyclerView
-            android:id="@+id/affiliation_recycler"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Affiliation 1:"
+            android:textSize="20sp"/>
+    <Spinner
+            android:id="@+id/affiliatonOne_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
+    </Spinner>
+
+    <Switch
+            android:id="@+id/teamUp_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/SwitchTheme"
+            android:layout_marginBottom="20dp"
+            android:switchPadding="20dp"
+            android:text="Using Team-Up Card"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/affiliationTwo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Affiliation 2:"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+    <Spinner
+            android:id="@+id/affiliatonTwo_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+    </Spinner>
 
     <Button
             android:id="@+id/selectVillian_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/select_a_villian"/>
+            android:text="Select a Villian"/>
 </LinearLayout>

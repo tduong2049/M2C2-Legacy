@@ -9,7 +9,6 @@
     <string name="equip_agent">Equip Agent</string>
     <string name="add_allies">Add Allies</string>
     <string name="add_powers">Add Powers</string>
-    <string name="select_a_villian">Select a Villian</string>
 
     <string-array name="agentClass_array">
         <item>Espionage Agent</item>
@@ -35,5 +34,12 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+    </string-array>
+
+    <string-array name="affiliation_array">
+        <item></item>
+        <item>Avengers</item>
+        <item>Inhumans</item>
+        <item>Spider-Friends</item>
     </string-array>
 </resources>
