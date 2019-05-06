@@ -3,6 +3,7 @@ package com.example.m2_c2
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -46,7 +47,7 @@ class AgentSummaryActivity : AppCompatActivity() {
             }
 
             agent.affiliations.size == 2 -> {
-                agentAffiliationText.text = "Affiliation: " + "${agent.affiliations[0].name} / ${agent.affiliations[1].name}"
+                agentAffiliationText.text = "Affiliations: " + "${agent.affiliations[0].name} / ${agent.affiliations[1].name}"
                 agentAffiliationText.visibility = View.VISIBLE
             }
         }
@@ -87,13 +88,24 @@ class AgentSummaryActivity : AppCompatActivity() {
         calculateStrengthButton.setOnClickListener {
             agent.strength = agent.rank
 
+            agentClassChecker(agent, this)
+            agentAffiliationChecker(agent, agentStrengthText, this)
             agentEquipmentChecker(agent, agentStrengthText,this)
             agentAllyChecker(agent, agentStrengthText, this)
+            agentPowerChecker(agent, agentStrengthText, this)
             agentStrengthText.text = agent.strength.toString()
+        }
+
+        selectVillianButton = findViewById(R.id.selectVillian_button)
+
+        selectVillianButton.setOnClickListener {
+            val villianSelectIntent = createVillianSelectIntent(this, agent)
+
+            startActivity(villianSelectIntent)
         }
     }
 
-    fun agentEquipmentChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
+    private fun agentEquipmentChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
         for (equipment in agent.equipment) {
             when (equipment.name) {
                 getString(R.string.thors_helmet) -> applyThorsHelmet(agent)
@@ -131,7 +143,7 @@ class AgentSummaryActivity : AppCompatActivity() {
         }
     }//end agent equipment checker
 
-    fun agentAllyChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
+    private fun agentAllyChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
         for (ally in agent.allies) {
             when (ally.name) {
                 getString(R.string.falcon) -> applyFalcon(agent, agentStrengthText, context)
@@ -151,5 +163,51 @@ class AgentSummaryActivity : AppCompatActivity() {
                 getString(R.string.the_vision) -> applyTheVision(agent)
             }
         }
+    }// end agent's ally checker
+
+    private fun agentPowerChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
+        for (power in agent.powers) {
+            when (power.name) {
+                getString(R.string.master_tactician) -> applyMasterTactician(agent, agentStrengthText, context)
+                getString(R.string.heightened_senses) -> applyHeightenedSenses(agent)
+                getString(R.string.super_strength) -> applySuperStrength(agent, context)
+                getString(R.string.martial_artist) -> applyMartialArtist(agent)
+                getString(R.string.super_spy) -> applySuperSpy(agent)
+                getString(R.string.enhanced_agility) -> applyEnhancedAgility(agent)
+                getString(R.string.super_soldier) -> applySuperSoldier(agent)
+                getString(R.string.master_marksman) -> applyMasterMarksman(agent)
+                getString(R.string.size_alteration) -> applySizeAlteration(agent)
+                getString(R.string.super_intelligence) -> applySuperIntelligence(agent)
+                getString(R.string.invulnerability) -> applyInvulnerability(agent)
+                getString(R.string.elemental_manipulation) -> applyElementalManipulation(agent)
+                getString(R.string.super_speed) -> applySuperSpeed(agent)
+                getString(R.string.energy_blasts) -> applyEnergyBlasts(agent, agentStrengthText, context)
+                getString(R.string.supersonic_flight) -> applySupersonicFlight(agent)
+            }
+        }
+    }// end agent's power checker
+
+    private fun agentAffiliationChecker(agent: Agent, agentStrengthText: TextView, context: Context) {
+        for (affiliation in agent.affiliations) {
+            when (affiliation.name) {
+                getString(R.string.inhumans) -> applyInhumans(agent)
+                getString(R.string.spider_friends) -> applySpiderFriends(agent, agentStrengthText, context)
+            }
+        }
     }
-}
+
+    private fun agentClassChecker(agent: Agent, context: Context) {
+        when (agent.name) {
+            getString(R.string.recruiting_agent) -> applyRecruitingAgent(agent)
+            getString(R.string.tech_agent) -> applyTechAgent(agent, context)
+        }
+    }
+
+    private fun createVillianSelectIntent(context: Context, agent: Agent): Intent {
+        val intent = Intent(context, VillianSelectActivity::class.java)
+
+        // Serialize the Agent object to carry over data into next activity
+        intent.putExtra("agent_id", agent)
+        return intent
+    }
+}// end onCreate activity

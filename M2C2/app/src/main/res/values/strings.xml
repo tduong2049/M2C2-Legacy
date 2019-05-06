@@ -79,6 +79,12 @@
     <string name="inhumans">Inhumans</string>
     <string name="avengers">Avengers</string>
     <string name="spider_friends">Spider-Friends</string>
+    <string name="espionage_agent">Espionage Agent</string>
+    <string name="operations_agent">Operations Agent</string>
+    <string name="recon_agent">Recon Agent</string>
+    <string name="recruiting_agent">Recruiting Agent</string>
+    <string name="tactical_agent">Tactical Agent</string>
+    <string name="tech_agent">Tech Agent</string>
 
     <string-array name="agentClass_array">
         <item>Espionage Agent</item>

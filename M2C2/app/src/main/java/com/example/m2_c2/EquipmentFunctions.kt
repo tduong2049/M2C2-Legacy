@@ -194,7 +194,7 @@ fun applyMandarinsRings(agent: Agent, agentStrengthText: TextView, context: Cont
     val dialogBuilder = AlertDialog.Builder(context)
 
     dialogBuilder.setTitle("Mandarin's Rings")
-    dialogBuilder.setMessage("How many rings are you wearing? (Maximum of 10 Allowed)")
+    dialogBuilder.setMessage("How many rings are you wearing? (Extra +1 Bonus Each. Maximum of 10 Allowed)")
 
     var input: EditText = EditText(context)
     input.inputType = InputType.TYPE_CLASS_NUMBER
@@ -203,6 +203,7 @@ fun applyMandarinsRings(agent: Agent, agentStrengthText: TextView, context: Cont
     dialogBuilder.setPositiveButton("Confirm", DialogInterface.OnClickListener { dialog, which ->
 
         when (input.text.toString()) {
+            "0" -> agent.strength += 0
             "1" -> agent.strength += 1
             "2" -> agent.strength += 2
             "3" -> agent.strength += 3

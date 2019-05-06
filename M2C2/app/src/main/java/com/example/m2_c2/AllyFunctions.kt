@@ -3,8 +3,6 @@ package com.example.m2_c2
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.text.InputType
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
