@@ -6,4 +6,6 @@
     <color name="colorBonus">#32D7FC</color>
     <color name="colorGold">#FFD44F</color>
     <color name="colorRank">#6A49FF</color>
+    <color name="colorNoDisadvantages">#31D217</color>
+    <color name="colorHasDisadvantages">#F10C0C</color>
 </resources>

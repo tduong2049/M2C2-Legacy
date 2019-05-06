@@ -9,10 +9,10 @@ import android.widget.Button
 import android.widget.Spinner
 
 class AgentSetupActivity : AppCompatActivity() {
-    lateinit var agentClassSpinner: Spinner
-    lateinit var agentSexSpinner: Spinner
-    lateinit var agentRankSpinner: Spinner
-    lateinit var equipAgentButton: Button
+    private lateinit var agentClassSpinner: Spinner
+    private lateinit var agentSexSpinner: Spinner
+    private lateinit var agentRankSpinner: Spinner
+    private lateinit var equipAgentButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

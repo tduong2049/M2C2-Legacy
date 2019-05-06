@@ -13,13 +13,13 @@ class Agent(name: String, val sex: String = "Male", var rank: Int = 1, var stren
         val oneShots: MutableList<OneShot> = mutableListOf()
 }
 
-class Equipment(name: String, type: String, var bonus: Int = 0, val goldValue: Int = 0) : Card(name)
+class Equipment(name: String, val type: String, var bonus: Int = 0, val goldValue: Int = 0) : Card(name)
 
 class Ally(name: String, var bonus: Int = 0) : Card(name)
 
 class OneShot(name: String, var playerBonus: Int = 0, var monsterBonus: Int = 0, val goldValue: Int = 0) : Card(name)
 
-class Monster(name:String, val level: Int = 1, var strength: Int = 0): Card(name) {
+class Villian(name:String, val level: Int = 1, var strength: Int = 0): Card(name) {
     val modifiers: MutableList<MonsterModifier> = mutableListOf()
     val oneShots: MutableList<OneShot> = mutableListOf()
 }

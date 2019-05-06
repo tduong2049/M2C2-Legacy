@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".VillianSelectActivity">
+        </activity>
+        <activity android:name=".AgentSummaryActivity">
+        </activity>
         <activity android:name=".AffiliationSetupActivity">
         </activity>
         <activity android:name=".PowerSetupActivity">

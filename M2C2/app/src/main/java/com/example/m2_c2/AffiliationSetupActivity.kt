@@ -1,18 +1,18 @@
 package com.example.m2_c2
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.support.v7.widget.RecyclerView
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
-import org.jetbrains.anko.find
 
 class AffiliationSetupActivity : AppCompatActivity() {
     lateinit var affiliationOneSpinner: Spinner
     lateinit var affiliationTwoSpinner: Spinner
     lateinit var teamUpSwitch: Switch
     lateinit var affiliationTwoText: TextView
-    lateinit var selectVillainButton: Button
+    lateinit var viewAgentSummaryButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,10 +59,14 @@ class AffiliationSetupActivity : AppCompatActivity() {
             }
         }
 
-        selectVillainButton = findViewById(R.id.selectVillian_button)
+        viewAgentSummaryButton = findViewById(R.id.viewAgentSummary_button)
 
-        selectVillainButton.setOnClickListener {
+        viewAgentSummaryButton.setOnClickListener {
             affiliationChoiceChecker(agent, affiliationOneSpinner, affiliationTwoSpinner, teamUpSwitch)
+
+            val agentSummaryIntent = createAgentSummaryIntent(this, agent)
+
+            startActivity(agentSummaryIntent)
         }
     }
 
@@ -84,5 +88,15 @@ class AffiliationSetupActivity : AppCompatActivity() {
         }
 
         if (teamUpSwitch.isChecked && (agent.affiliations.size == 1)) { agent.affiliations[0].hasDisadvantages = false }
+    }
+
+    // Function that takes in an Agent object and creates an intent to
+    // carry over its data into the Equipment Setup activity
+    private fun createAgentSummaryIntent(context: Context, agent: Agent): Intent {
+        val intent = Intent(context, AgentSummaryActivity::class.java)
+
+        // Serialize the Agent object to carry over data into next activity
+        intent.putExtra("agent_id", agent)
+        return intent
     }
 }

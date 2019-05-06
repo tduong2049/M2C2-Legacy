@@ -7,13 +7,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
-        tools:context=".AllySetupActivity">
+        tools:context=".VillianSelectActivity">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Choose Your Allies"
+            android:text="Select a Villian"
             android:textColor="@color/colorPrimary"
             android:fontFamily="sans-serif-black"
             android:shadowDx="4"
@@ -23,39 +23,17 @@
             android:layout_marginBottom="40dp"
             android:textSize="30sp"/>
 
-    <TextView
-            android:id="@+id/agentClass_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20sp"/>
-
-    <TextView
-            android:id="@+id/agentSex_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20sp"/>
-
-    <TextView
-            android:id="@+id/agentRank_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20sp"
-            android:layout_marginBottom="20dp"/>
-
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/ally_recycler"
+            android:id="@+id/villian_recycler"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:layout_marginBottom="20dp"/>
 
     <Button
-            android:id="@+id/addPowers_button"
+            android:id="@+id/beginFight_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/add_powers"/>
+            android:text="Fight!"/>
 </LinearLayout>

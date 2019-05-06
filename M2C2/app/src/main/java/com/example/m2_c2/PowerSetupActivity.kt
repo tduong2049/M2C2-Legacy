@@ -50,21 +50,21 @@ class PowerSetupActivity : AppCompatActivity() {
 
     // Function that creates every base-game Power card and returns a list of it
     fun createPowers(): MutableList<Power> {
-        val power01 = Power("Master Tactician", 2, 2)
-        val power02 = Power("Heightened Senses", 1, 1)
-        val power03 = Power("Super-Strength", 3, 3)
-        val power04 = Power("Martial Artist", 2, 1)
-        val power05 = Power("Super Spy", 1, 1)
-        val power06 = Power("Enhanced Agility", 2, 2)
-        val power07 = Power("Super Soldier", 1, 2)
-        val power08 = Power("Master Marksman", 2, 1)
-        val power09 = Power("Size Alteration", 1,3)
-        val power10 = Power("Super-Intelligence", 2, 3)
-        val power11 = Power("Invulnerability", 3, 4)
-        val power12 = Power("Elemental Manipulation", 4, 3)
-        val power13 = Power("Super-Speed", 2,2)
-        val power14 = Power("Energy Blasts",1,2)
-        val power15 = Power("Supersonic Flight", 1,1)
+        val power01 = Power(getString(R.string.master_tactician), 2, 2)
+        val power02 = Power(getString(R.string.heightened_senses), 1, 1)
+        val power03 = Power(getString(R.string.super_strength), 3, 3)
+        val power04 = Power(getString(R.string.martial_artist), 2, 1)
+        val power05 = Power(getString(R.string.super_spy), 1, 1)
+        val power06 = Power(getString(R.string.enhanced_agility), 2, 2)
+        val power07 = Power(getString(R.string.super_soldier), 1, 2)
+        val power08 = Power(getString(R.string.master_marksman), 2, 1)
+        val power09 = Power(getString(R.string.size_alteration), 1,3)
+        val power10 = Power(getString(R.string.super_intelligence), 2, 3)
+        val power11 = Power(getString(R.string.invulnerability), 3, 4)
+        val power12 = Power(getString(R.string.elemental_manipulation), 4, 3)
+        val power13 = Power(getString(R.string.super_speed), 2,2)
+        val power14 = Power(getString(R.string.energy_blasts),1,2)
+        val power15 = Power(getString(R.string.supersonic_flight), 1,1)
 
 
         val powerList: MutableList<Power> = mutableListOf(power01, power02, power03, power04, power05, power06, power07,
