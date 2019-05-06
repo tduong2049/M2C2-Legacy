@@ -9,6 +9,76 @@
     <string name="equip_agent">Equip Agent</string>
     <string name="add_allies">Add Allies</string>
     <string name="add_powers">Add Powers</string>
+    <string name="agent_summary">Agent Summary</string>
+    <string name="agent_equipment">Agent\'s Equipment:</string>
+    <string name="agent_allies">Agent\'s Allies:</string>
+    <string name="agent_powers">Agent\'s Powers</string>
+    <string name="agent_affiliations">Agent\'s Affiliations</string>
+    <string name="thors_helmet">Thor\'s Helmet</string>
+    <string name="antmans_helmet">Ant-Man\'s Helmet</string>
+    <string name="nick_furys_eyepatch">Nick Fury\'s Eyepatch</string>
+    <string name="lokis_helmet">Loki\'s Helmet</string>
+    <string name="black_bolts_tuning_fork">Black Bolt\'s Tuning Fork</string>
+    <string name="iron_man_model_one_armor">Iron Man\'s Model 1 Armor</string>
+    <string name="falcons_wingsuit">Falcon\'s Wingsuit</string>
+    <string name="symbiote_suit">Symbiote Suit</string>
+    <string name="doctor_octopus_tentacle_suit">Doctor Octopus\' Tentacle Suit</string>
+    <string name="spidermans_spidey_suit">Spider-Man\'s Spidey Suit</string>
+    <string name="iron_mans_model_fifty_one_armor">Iron Man\'s Model 51 Armor</string>
+    <string name="kravens_spear">Kraven\'s Spear</string>
+    <string name="mjolnir">Mjolnir</string>
+    <string name="klaws_sonic_blaster">Klaw\'s Sonic Blaster</string>
+    <string name="iron_mans_repulsor">Iron Man\'s Repulsor</string>
+    <string name="war_machines_wrist_rocket">War Machine\'s Wrist Rocket</string>
+    <string name="captain_americas_shield">Captain America\'s Shield</string>
+    <string name="shield_pistol">S.H.I.E.L.D. Pistol</string>
+    <string name="daredevils_billy_club">Daredevil\'s Billy Club</string>
+    <string name="widows_bite">Widow\'s Bite</string>
+    <string name="mandarins_rings">Mandarin\'s Rings</string>
+    <string name="spidermans_web_shooters">Spider-Man\'s Web Shooters</string>
+    <string name="absorbing_mans_ball_and_chain">Absorbing Man\'s Ball and Chain</string>
+    <string name="hawkeyes_bow">Hawkeye\'s Bow</string>
+    <string name="sevenleagues_boots">Seven-League\'s Boots</string>
+    <string name="namors_ankle_wings">Namor\'s Ankle Wings</string>
+    <string name="green_goblins_globin_glider">Green Goblin\'s Goblin Glider</string>
+    <string name="headgear">Headgear</string>
+    <string name="armor">Armor</string>
+    <string name="one_handed">One Handed</string>
+    <string name="two_handed">Two Handed</string>
+    <string name="footgear">Footgear</string>
+    <string name="falcon">Falcon</string>
+    <string name="iron_man">Iron Man</string>
+    <string name="hawkeye">Hawkeye</string>
+    <string name="thor">Thor</string>
+    <string name="captain_marvel">Captain Marvel</string>
+    <string name="spiderman">Spider-Man</string>
+    <string name="black_panther">Black Panther</string>
+    <string name="daredevil">Daredevil</string>
+    <string name="black_widow">Black Widow</string>
+    <string name="hulk">Hulk</string>
+    <string name="nick_fury">Nick Fury</string>
+    <string name="captain_america">Captain America</string>
+    <string name="antman">Ant-Man</string>
+    <string name="shehulk">She-Hulk</string>
+    <string name="the_vision">The Vision</string>
+    <string name="master_tactician">Master Tactician</string>
+    <string name="heightened_senses">Heightened Senses</string>
+    <string name="super_strength">Super-Strength</string>
+    <string name="martial_artist">Martial Artist</string>
+    <string name="super_spy">Super Spy</string>
+    <string name="enhanced_agility">Enhanced Agility</string>
+    <string name="super_soldier">Super Soldier</string>
+    <string name="master_marksman">Master Marksman</string>
+    <string name="size_alteration">Size Alteration</string>
+    <string name="super_intelligence">Super-Intelligence</string>
+    <string name="invulnerability">Invulnerability</string>
+    <string name="elemental_manipulation">Elemental Manipulation</string>
+    <string name="super_speed">Super-Speed</string>
+    <string name="energy_blasts">Energy Blasts</string>
+    <string name="supersonic_flight">Supersonic Flight</string>
+    <string name="inhumans">Inhumans</string>
+    <string name="avengers">Avengers</string>
+    <string name="spider_friends">Spider-Friends</string>
 
     <string-array name="agentClass_array">
         <item>Espionage Agent</item>
@@ -42,4 +112,19 @@
         <item>Inhumans</item>
         <item>Spider-Friends</item>
     </string-array>
+
+    <string-array name="mandarinsRings_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
 </resources>

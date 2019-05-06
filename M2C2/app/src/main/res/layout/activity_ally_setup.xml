@@ -42,13 +42,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/ally_recycler"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="240dp"/>
+            android:layout_height="240dp"
+            android:layout_marginBottom="20dp"/>
 
     <Button
             android:id="@+id/addPowers_button"

@@ -50,21 +50,21 @@ class AllySetupActivity : AppCompatActivity() {
 
     // Function that creates every base-game Ally card and returns a list of it
     fun createAllies(): MutableList<Ally> {
-        val ally01 = Ally("Falcon", 1)
-        val ally02 = Ally("Iron Man", 2)
-        val ally03 = Ally("Hawkeye", 1)
-        val ally04 = Ally("Thor", 4)
-        val ally05 = Ally("Captain Marvel", 2)
-        val ally06 = Ally("Spider-Man", 2)
-        val ally07 = Ally("Black Panther", 1)
-        val ally08 = Ally("Daredevil", 1)
-        val ally09 = Ally("Black Widow", 1)
-        val ally10 = Ally("Hulk", 5)
-        val ally11 = Ally("Nick Fury", 1)
-        val ally12 = Ally("Captain America", 2)
-        val ally13 = Ally("Ant-Man", 1)
-        val ally14 = Ally("She-Hulk", 2)
-        val ally15 = Ally("The Vision", 2)
+        val ally01 = Ally(getString(R.string.falcon), 1)
+        val ally02 = Ally(getString(R.string.iron_man), 2)
+        val ally03 = Ally(getString(R.string.hawkeye), 1)
+        val ally04 = Ally(getString(R.string.thor), 4)
+        val ally05 = Ally(getString(R.string.captain_marvel), 2)
+        val ally06 = Ally(getString(R.string.spiderman), 2)
+        val ally07 = Ally(getString(R.string.black_panther), 1)
+        val ally08 = Ally(getString(R.string.daredevil), 1)
+        val ally09 = Ally(getString(R.string.black_widow), 1)
+        val ally10 = Ally(getString(R.string.hulk), 5)
+        val ally11 = Ally(getString(R.string.nick_fury), 1)
+        val ally12 = Ally(getString(R.string.captain_america), 2)
+        val ally13 = Ally(getString(R.string.antman), 1)
+        val ally14 = Ally(getString(R.string.shehulk), 2)
+        val ally15 = Ally(getString(R.string.the_vision), 2)
 
 
         val allyList: MutableList<Ally> = mutableListOf(ally01, ally02, ally03, ally04, ally05, ally06, ally07,
